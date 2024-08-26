@@ -1,0 +1,52 @@
+{
+  "name": "react-library-template",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "dev": "vite --port 5174",
+    "build": "tsc --p ./tsconfig-build.json && vite build",
+    "watch": "tsc --p ./tsconfig-build.json && vite build --watch",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "version-patch": "npm version patch",
+    "version-minor": "npm version minor",
+    "version-major": "npm version major"
+  },
+  "peerDependencies": {
+    "react": "16.x - 18.x",
+    "react-dom": "16.x - 18.x"
+  },
+  "devDependencies": {
+    "@types/css-modules": "^1.0.5",
+    "@types/node": "^20.11.4",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "bootstrap": "^5.3.3",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "glob": "^10.3.10",
+    "globals": "^15.9.0",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "^18.3.1",
+    "sass": "^1.70.0",
+    "typescript": "5.2.2",
+    "vite": "5.0.8",
+    "vite-plugin-dts": "^3.7.1",
+    "vite-plugin-lib-inject-css": "^1.3.0"
+  }
+}
